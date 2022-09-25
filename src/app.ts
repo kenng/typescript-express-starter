@@ -1,15 +1,15 @@
-import express, {Application, Request, Response } from 'express'
-import sum from './sum';
+import express, { Application, Request, Response } from 'express';
 
-const app:Application = express()
+const app: Application = express();
 
-const port: number = 3001
+const port: number = 3001;
 
 app.get('/hello', (req: Request, res: Response) => {
-    const total = sum(5, 6);
-    res.send(`Hello World! ${total}`);
-})
+  res.send(`Hello World!`);
+});
 
 app.listen(port, function () {
-    console.log(`App is listening on port ${port}`)
-})
+  console.log(`App is listening on port ${port}`);
+});
+
+export default app;

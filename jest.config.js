@@ -6,4 +6,9 @@ module.exports = {
     '^.+\\.ts?$': 'ts-jest',
   },
   transformIgnorePatterns: ['<rootDir>/node_modules/'],
+  collectCoverageFrom: [
+    '<rootDir>/src/**/*.{ts,js,jsx}',
+    '!**/node_modules/**',
+    '!**/.stories.{js,jsx}',
+  ],
 };
